@@ -1,0 +1,34 @@
+{
+    "$schema": "https://json.schemastore.org/package",
+    "name": "@example/electron",
+    "type": "commonjs",
+    "main": "main.js",
+    "version": "0.0.0-0",
+    "license": "MIT",
+    "description": "example for electron app",
+    "scripts": {
+        "release": "electron-builder",
+        "clean:tsc": "tsc --build --clean",
+        "clean:out": "rm -rf ./out",
+        "clean": "npm run clean:tsc && npm run clean:out",
+        "build": "tsc",
+        "start": "electron ."
+    },
+    "dependencies": {
+        "@example/app": "file:./app",
+        "fastify": "^5.6.2",
+        "nanoid": "^5.1.6",
+        "pino": "^10.1.0",
+        "ulid": "^3.0.1"
+    },
+    "devDependencies": {
+        "electron": "^39.2.3",
+        "electron-builder": "^26.0.12",
+        "ts-node": "^10.9.2",
+        "ts-proto": "^2.8.3",
+        "typescript": "^5.9.3"
+    },
+    "build": {
+        "appId": "com.example.electron"
+    }
+}

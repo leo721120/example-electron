@@ -1,0 +1,9 @@
+version: v2
+
+plugins:
+  - remote: buf.build/community/stephenh-ts-proto
+    out: ./app
+    opt:
+     - paths=source_relative
+     - useJsonName=true
+     - fileSuffix=.pb
